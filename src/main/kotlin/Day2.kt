@@ -1,6 +1,6 @@
 import java.io.File
 
-class Day2 {
+class Day2 : Day {
     enum class ChosenMove {
         ROCK, SCISSORS, PAPER
     }
@@ -62,14 +62,14 @@ class Day2 {
         GameResult.Lose -> chooseLose(game.first)
     }
 
-    fun part1() = readInput()
+    override fun part1() = readInput()
         .map {
             val strategy = it.split(" ").map { move -> convertMove(move) }
             strategy[0] to strategy[1]
         }
         .sumOf { gameOutcome(it) }
 
-    fun part2() = readInput()
+    override fun part2() = readInput()
         .map {
             val strategy = it.split(" ")
             convertMove(strategy[0]) to convertStrategy(strategy[1])

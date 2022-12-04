@@ -1,6 +1,6 @@
 import java.io.File
 
-class Day3 {
+class Day3 : Day {
     private fun readInput() = File(INPUT_PATH).readLines()
 
     private fun getPriority(x: Char) = when {
@@ -14,9 +14,9 @@ class Day3 {
         return first.intersect(second).sumOf { getPriority(it) }
     }
 
-    fun part1(): Int = readInput().sumOf { getPriorityOfRucksack(it) }
+    override fun part1(): Int = readInput().sumOf { getPriorityOfRucksack(it) }
 
-    fun part2(): Int = readInput()
+    override fun part2(): Int = readInput()
         .map { it.toSet() }
         .chunked(3)
         .sumOf {

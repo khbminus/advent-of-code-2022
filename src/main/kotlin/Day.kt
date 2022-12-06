@@ -1,4 +1,4 @@
 interface Day {
-    fun part1(): Int
-    fun part2(): Int
+    fun part1(): Any
+    fun part2(): Any
 }

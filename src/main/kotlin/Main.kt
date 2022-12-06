@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-    val days = listOf(Day1(), Day2(), Day3(), Day4())
+    val days = listOf(Day1(), Day2(), Day3(), Day4(), Day5(), Day6())
     days.forEachIndexed { index, day ->
         println("---DAY ${index + 1}---")
         println("Answer for part 1 is ${day.part1()}")

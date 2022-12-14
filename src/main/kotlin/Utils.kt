@@ -13,3 +13,6 @@ fun <T> List<T>.splitBy(elem: T): List<List<T>> {
     }
     return transformed
 }
+
+operator fun Pair<Int, Int>.minus(oth: Pair<Int, Int>) = (first - oth.first) to (second - oth.second)
+operator fun Pair<Int, Int>.plus(oth: Pair<Int, Int>) = (first + oth.first) to (second + oth.second)

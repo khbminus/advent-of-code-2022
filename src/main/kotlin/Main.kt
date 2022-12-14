@@ -12,7 +12,8 @@ fun main(args: Array<String>) {
         Day10(),
         Day11(),
         Day12(),
-        Day13()
+        Day13(),
+        Day14(),
     )
     days.forEachIndexed { index, day ->
         println("---DAY ${index + 1}---")

@@ -16,3 +16,5 @@ fun <T> List<T>.splitBy(elem: T): List<List<T>> {
 
 operator fun Pair<Int, Int>.minus(oth: Pair<Int, Int>) = (first - oth.first) to (second - oth.second)
 operator fun Pair<Int, Int>.plus(oth: Pair<Int, Int>) = (first + oth.first) to (second + oth.second)
+fun Int.getBit(x: Int) = (this shr x) and 1
+fun Int.setBit(x: Int) = this or (1 shl x)
